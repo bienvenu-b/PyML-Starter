@@ -1,71 +1,55 @@
 # PyML Starter — by B. Bienvenu  
-A clean, beginner-friendly Python project demonstrating data structures, loops, and simple plotting.  
-This repository uses **non-sensitive mock data**, making it safe for public submission (e.g., Tier IV Student Engineer application).
-
----
+A small collection of simple Python scripts that demonstrate basic programming ideas.  
+The project includes short examples of dictionaries, loops, and a basic plot created with `matplotlib`.
 
 ## 🔍 Overview
-This repo includes small, self-contained Python scripts that show:
+This repository shows a few core Python fundamentals:
+- looping through dictionaries
+- basic list operations
+- simple conditional checks
+- a small plot created with `matplotlib`
+- a minimal project structure for organizing scripts
 
-- looping through dictionaries  
-- basic list operations  
-- conditional logic  
-- simple data visualization using `matplotlib`  
-- clean, readable code following good practices  
-
-It provides evidence of fundamental coding ability — exactly what student engineer roles expect.
-
----
+The code examples are short, clear, and easy to follow.
 
 ## 📂 Project Structure
-
+```text
 PyML-Starter/
 
 │
-
 ├── dictionaries.py
-
 ├── loops.py
-
 ├── simple_plot.py
-
 └── requirements.txt
-
----
+```
 
 ## 🧪 Scripts
 
 ### **1. dictionaries.py**  
-Looping through keys, values, and key–value pairs in Python dictionaries.
+Shows how to loop through keys, values, and key–value pairs.
 
 ### **2. loops.py**  
-Examples of iterating through lists, checking conditions, and using ranges.
+Examples of simple list loops and conditional logic.
 
 ### **3. simple_plot.py**  
-Generates a simple line plot using mock data and `matplotlib`.  
-Creates `simple_plot.png` as output.
-
----
+Creates a basic line plot using mock data and saves it as `simple_plot.png`.
 
 ## 📦 Requirements
-**matplotlib**
-C#
+`matplotlib`
+
 Install dependencies with:
+
+```text
 pip install -r requirements.txt
+```
 
----
-
-## 🚀 Future Extensions
-I may expand this repository with:
-
-- more functions & modular Python code  
-- Iris dataset ML examples (`sklearn.datasets.load_iris`)  
-- basic regression or classification  
-- additional visualizations  
-- Jupyter notebooks for tutorials  
-
----
+## 🚀 Possible Future Additions
+- small functions and modular Python code
+- simple examples using public datasets
+- additional plots or data exercises
+- Jupyter notebooks for experiments
 
 ## ✔ Notes
-This project intentionally avoids real dissertation data to prevent any publication or confidentiality issues.  
-Safe for public GitHub usage and job applications.
+No sensitive or unpublished data is included.  
+All data used is simple, mock data for practice.
+
