@@ -1,16 +1,17 @@
 # PyML Starter — by B. Bienvenu  
-A small collection of simple Python scripts that demonstrate basic programming ideas.  
-The project includes short examples of dictionaries, loops, and a basic plot created with `matplotlib`.
+A small collection of simple Python scripts demonstrating basic programming ideas.  
+The project includes short examples of dictionaries, loops, and beginner-friendly plots created with `matplotlib` and `scikit-learn`.
 
 ## 🔍 Overview
-This repository shows a few core Python fundamentals:
+This repository introduces a few core Python fundamentals:
 - looping through dictionaries
 - basic list operations
 - simple conditional checks
-- a small plot created with `matplotlib`
-- a minimal project structure for organizing scripts
+- plotting data with `matplotlib`
+- loading a built-in dataset (`Iris`)
+- a clean project structure for organizing scripts
 
-The code examples are short, clear, and easy to follow.
+The examples are short, readable, and easy for beginners.
 
 ## 📂 Project Structure
 ```text
@@ -26,16 +27,24 @@ PyML-Starter/
 ## 🧪 Scripts
 
 ### **1. dictionaries.py**  
-Shows how to loop through keys, values, and key–value pairs.
+Shows how to create dictionaries and loop through keys, values, and key–value pairs.
 
 ### **2. loops.py**  
 Examples of simple list loops and conditional logic.
 
 ### **3. simple_plot.py**  
-Creates a basic line plot using mock data and saves it as `simple_plot.png`.
+```
+Creates:
+- a basic line plot using the Iris dataset
+- a bar chart using a small Premier League winners dataset 
+
+Both plots are saved as images.
+```
 
 ## 📦 Requirements
-`matplotlib`
+- `pandas`
+- `matplotlib`
+- `scikit-learn`
 
 Install dependencies with:
 
@@ -50,6 +59,5 @@ pip install -r requirements.txt
 - Jupyter notebooks for experiments
 
 ## ✔ Notes
-No sensitive or unpublished data is included.  
-All data used is simple, mock data for practice.
-
+- No sensitive or unpublished data is included.  
+- All data used is either built-in or simple mock/practice data.
