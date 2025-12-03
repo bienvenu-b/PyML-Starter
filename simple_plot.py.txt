@@ -1,0 +1,117 @@
+# simple_plot.py
+
+print("Exercise 1: Plotting Data Using the Classic Iris Dataset\n")
+
+"""
+A simple example of plotting data using the classic Iris dataset.
+This script shows:
+- loading a built-in dataset (Iris)
+- selecting one feature
+- creating a basic line plot
+- saving the figure as iris_plot.png
+"""
+
+# Import libraries
+from sklearn.datasets import load_iris
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Load the Iris dataset
+iris = load_iris()
+
+# Convert to DataFrame (useful for checking column names)
+df = pd.DataFrame(iris.data, columns=iris.feature_names)
+
+# Select petal length column (pandas version)
+petal_length_df = df["petal length (cm)"]
+
+# Test loading Iris dataset
+print("=== Iris Dataset Sample ===\n")
+print(petal_length_df.head())
+print("\n", df.columns, "\n")
+
+# Select one feature to plot (NumPy version — simple for plotting)
+petal_length = iris.data[:, 2]
+
+# Create a simple line plot
+plt.figure(figsize=(10, 5))
+plt.plot(petal_length)
+
+# Add labels and a title
+plt.xlabel("Sample Index")
+plt.ylabel("Petal Length (cm)")
+plt.title("Iris Dataset – Petal Length")
+
+# Save the figure
+plt.savefig("iris_plot.png")
+
+# Show the plot
+plt.show()
+
+
+print("\n" + "-" * 78 + "\n")
+
+print("EXERCISE 2: Plotting a stylish yet beginner-friendly plot using the Premier League winners dataset\n")
+
+"""
+A stylish yet beginner-friendly plot using the Premier League winners dataset.
+This script shows:
+- loading a CSV file with pandas
+- counting titles per club
+- sorting results
+- creating a clean bar chart with soft colors
+- adding numbers on top of bars
+"""
+
+# Import libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataset
+df = pd.read_csv("premier_league_winners.csv")
+
+# Test loading the premier league winners dataset
+print("=== Premier League Winners Dataset Sample ===\n")
+print(df.head())
+print("\n", df.columns, "\n")
+
+# Count and sort title counts (most to least)
+title_counts = df["Winner"].value_counts().sort_values(ascending=False)
+
+# Create the bar chart
+plt.figure(figsize=(12, 6))
+
+bars = plt.bar(title_counts.index, title_counts.values)
+
+# Soft, consistent color
+for bar in bars:
+    bar.set_color("#4C72B0")
+
+# Add numbers on top of each bar
+for bar in bars:
+    height = bar.get_height()
+    plt.text(
+        bar.get_x() + bar.get_width() / 2,
+        height + 0.1,
+        str(int(height)),
+        ha="center",
+        va="bottom",
+        fontsize=10
+    )
+
+# Add labels and title
+plt.xlabel("Club")
+plt.ylabel("Number of Titles")
+plt.title("Premier League Titles by Club (1990–2025)")
+
+# Rotate x-axis labels slightly for readability
+plt.xticks(rotation=45, ha="right")
+
+# Clean layout
+plt.tight_layout()
+
+# Save the figure
+plt.savefig("premier_league_titles_stylish.png")
+
+# Show the plot
+plt.show()
